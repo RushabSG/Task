@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nifty 50 Data</title>
+    <style>
+        /* Add your CSS styles for the card layout here */
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nifty 50 Data</h1>
+    <div class="card-container">
+        {% for company, value in nifty50_data.items %}
+            <div class="card">
+                <h2>{{ company }}</h2>
+                <p>{{ value }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
